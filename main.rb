@@ -9,8 +9,7 @@ word = File.readlines(__dir__ + '/data/words.txt', encoding: 'UTF-8', chomp: tru
 game = Game.new(word)
 console_interface = ConsoleInterface.new(game)
 
-puts "Привет!".colorize(color: :light_blue, background: :light_black)
-puts String.colors
+puts "Привет!".colorize(color: :light_blue)
 
 until game.over?
   console_interface.print_out
