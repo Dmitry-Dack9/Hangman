@@ -11,8 +11,11 @@ class ConsoleInterface
 
   def print_out
     puts "Слово: #{word_to_show}".colorize(color: :light_blue)
+
     puts "#{figure}".colorize(color: :yellow)
+
     puts "Ошибки #{@game.errors_made}: #{errors_to_show}".colorize(color: :red)
+
     puts "У вас осталось ошибок: #{@game.errors_allowed}"
 
     if @game.won?
@@ -43,7 +46,7 @@ class ConsoleInterface
 
   def get_input
     print "Введите следующую букву: "
+
     letter = gets[0].upcase
   end
-
 end

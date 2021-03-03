@@ -3,6 +3,7 @@ class Game
 
   def initialize(word)
     @letters = word.chars
+
     @user_guesses = []
   end
 
@@ -35,6 +36,7 @@ class Game
 
   def play!(letter)
     letter = normalize_letters(letter)
+
     if !over? && !@user_guesses.include?(letter)
       @user_guesses << letter
     end
@@ -65,5 +67,4 @@ class Game
   def normalized_letters
     @letters.map { |letter| normalize_letters(letter) }
   end
-
 end

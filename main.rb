@@ -8,6 +8,7 @@ word = File.readlines(
       upcase
 
 game = Game.new(word)
+
 console_interface = ConsoleInterface.new(game)
 
 puts "Привет!".colorize(color: :light_blue)
